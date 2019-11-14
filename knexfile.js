@@ -1,5 +1,5 @@
 // Update with your config settings.
-
+require('dotenv').config();
 const dbConnnection = process.env.DATABASE_URL;
 
 module.exports = {
@@ -39,6 +39,11 @@ module.exports = {
     },
     seeds: {
       directory: "./data/seeds"
+    },
+    useNullAsDefault: true,
+    pool: {
+      min: 2,
+      max: 10,
     }
   }
 };

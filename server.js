@@ -5,15 +5,12 @@ const cors = require("cors");
 const server = express();
 
 // # Fix CORS Issues on the React Frontend # //
-const corsOptions = {
-  credentials: true,
-  origin: "https://pintreach-bw.netlify.com"
-};
+//
 
 server.use(express());
 server.use(express.json());
 server.use(helmet());
-server.use(cors(corsOptions));
+server.use(cors());
 // server.use(logger());
 
 server.get("/", (req, res) => {
